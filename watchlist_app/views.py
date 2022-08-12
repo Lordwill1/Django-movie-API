@@ -8,4 +8,5 @@ def movie_list(request):
         'movies':list (movies.values())
         
     }
+    #added a line
     return JsonResponse(data)
