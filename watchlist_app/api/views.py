@@ -6,7 +6,7 @@ from watchlist_app.api.serializers import MovieSerializer
 @api_view()
 def movie_list(request):
     movies = Movie.objects.all()
-    serializer = MovieSerializer(movies)
+    serializer = MovieSerializer(movies,many=True)
     return Response(serializer.data)
 
 @api_view()
